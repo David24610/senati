@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>index 2</title>
+</head>
+<body>
+    <script>
+        function algoritmo()
+        {
+            let bonificacion, comision, descuento, hijos_en_edad_escolar, sueldo_basico;
+            let sueldo_bruto, sueldo_neto, total_vendido;
+            hijos_en_edad_escolar = parseFloat (document.formulario1.hijos_en_edad_escolar.value);
+            total_vendido = parseFloat (document.formulario1.total_vendido.value);
+            sueldo_basico=600;
+            bonificacion=50*hijos_en_edad_escolar;
+            comision=total_vendido*0.075;
+            sueldo_bruto=sueldo_basico+comision+bonificacion;
+            descuento=sueldo_bruto*0.11;
+            sueldo_neto=sueldo_bruto-descuento;
+            document.formulario1.bonificacion.value = bonificacion;
+            document.formulario1.comision.value = comision;
+            document.formulario1.descuento.value = descuento;
+            document.formulario1.sueldo_basico.value = sueldo_basico;
+            document.formulario1.sueldo_bruto.value = sueldo_bruto;
+            document.formulario1.sueldo_neto.value = sueldo_neto;
+        }
+         
+                </script>
+            </head>
+            <body>
+                <form name="formulario1">
+                    <table style="text-align: left; margin-left: auto; margin-right: auto;">
+                        <tbody>
+                            <tr>
+                                <td>
+                                    <label for="hijos_en_edad_escolar">Ingresa el valor de hijos en edad escolar:</label>
+                                </td>
+                                <td>
+                                    <input name="hijos_en_edad_escolar" required="required" step="0.000001" type="number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="total_vendido">Ingresa el valor de total vendido:</label>
+                                </td>
+                                <td>
+                                    <input name="total_vendido" required="required" step="0.000001" type="number" />
+                                </td>
+                            </tr>
+                            <tr align="center">
+                                <td colspan="2" rowspan="1">
+                                    <input value="Procesar" type="button" onclick="algoritmo();" />
+                                    <input type="reset" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="bonificacion">Valor de bonificacion:</label>
+                                </td>
+                                <td>
+                                    <input name="bonificacion" step="0.000001" type="number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="comision">Valor de comision:</label>
+                                </td>
+                                <td>
+                                    <input name="comision" step="0.000001" type="number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="descuento">Valor de descuento:</label>
+                                </td>
+                                <td>
+                                    <input name="descuento" step="0.000001" type="number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="sueldo_basico">Valor de sueldo basico:</label>
+                                </td>
+                                <td>
+                                    <input name="sueldo_basico" step="0.000001" type="number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="sueldo_bruto">Valor de sueldo bruto:</label>
+                                </td>
+                                <td>
+                                    <input name="sueldo_bruto" step="0.000001" type="number" />
+                                </td>
+                            </tr>
+                            <tr>
+                                <td>
+                                    <label for="sueldo_neto">Valor de sueldo neto:</label>
+                                </td>
+                                <td>
+                                    <input name="sueldo_neto" step="0.000001" type="number" />
+                                </td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </form>
+            </body>
+        </html>
+</body>
+</html>
